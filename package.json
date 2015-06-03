@@ -1,6 +1,6 @@
 {
   "name": "lfmt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dead simple string formatting",
   "main": "index.js",
   "scripts": {
