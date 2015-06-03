@@ -16,8 +16,8 @@ var obj = {
   }
 };
 
-console.log(lfmt('{{foo}}', obj));  // 'bar'
-console.log(lfmt('{{baz.quux}}', obj));  // 'norf'
+console.log(lfmt('value = {{foo}}', obj));  // 'value = bar'
+console.log(lfmt('other value = {{baz.quux}}', obj));  // 'other value = norf'
 ```
 
 ### Installation
