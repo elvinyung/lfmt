@@ -34,6 +34,19 @@ describe('format', function testFormat() {
     var result = 'my value is 45';
     expect(lfmt.format(fmt, obj)).to.equal(result);
   });
+
+  it('should compile multiple context keys', function () {
+    var obj = {
+      foo: {
+        bar: 45
+      },
+      baz: 'aaaa'
+    };
+
+    var fmt = 'foo.bar is {{foo.bar}}, baz is {{baz}}';
+    var result = 'foo.bar is 45, baz is aaaa';
+    expect(lfmt.format(fmt, obj)).to.equal(result);
+  });
 });
 
 describe('getNested', function testGetNested() {
