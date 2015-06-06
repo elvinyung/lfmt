@@ -18,8 +18,20 @@ describe('format', function testFormat() {
       a: 'something'
     };
     var fmt = '{{a}} is something, but {{b}} is nothing';
-    var result = 'something is something, but {{b}} is nothing';
+    var result = 'something is something, but  is nothing';
 
+    expect(lfmt.format(fmt, obj)).to.equal(result);
+  });
+
+  it('should compile nested context keys', function () {
+    var obj = {
+      foo: {
+        bar: 45
+      }
+    };
+
+    var fmt = 'my value is {{foo.bar}}';
+    var result = 'my value is 45';
     expect(lfmt.format(fmt, obj)).to.equal(result);
   });
 });
