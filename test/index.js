@@ -54,7 +54,7 @@ describe('getNested', function testGetNested() {
     var foo = {
       bar: {
         baz: true,
-        quux: 'shouldn\t show up'
+        quux: 'shouldn\'t show up'
       }
     };
     expect(lfmt.getNested('bar.baz', foo)).to.equal(foo.bar.baz);
